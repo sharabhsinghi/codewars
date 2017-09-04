@@ -1,0 +1,11 @@
+def solution(string,markers):
+    str_list=string.split("\n")
+    for s in range(len(str_list)):
+        sen = str_list[s]
+        for i in markers:
+            try:
+                sen = sen[:sen.index(i)].strip()
+            except ValueError:
+                continue
+        str_list[s] = sen
+    return "\n".join(str_list)
