@@ -1,0 +1,7 @@
+def find_nb(m):
+    vol = 0
+    i = 0
+    while vol < m:
+        i += 1
+        vol += i**3
+    return i if vol == m else -1
