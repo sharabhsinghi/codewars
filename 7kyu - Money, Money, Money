@@ -1,0 +1,6 @@
+def calculate_years(P, I, T, D):
+    y = 0
+    while(P<D):
+        y += 1
+        P *= 1 + I * (1 - T)
+    return y
