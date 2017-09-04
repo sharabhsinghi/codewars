@@ -1,0 +1,6 @@
+def unique_in_order(iterable):
+    r = []
+    for i in iterable:
+        if (r and r[-1] != i) or not r:
+            r.append(i)
+    return r
