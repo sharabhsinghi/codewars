@@ -1,0 +1,13 @@
+def mul(n):
+    m = 1
+    for i in n:
+        m = m * int(i)
+    return str(m)
+
+def persistence(n):
+    p = 0
+    s = str(n)
+    while(len(s) > 1):
+        p += 1
+        s = mul(s)
+    return p
