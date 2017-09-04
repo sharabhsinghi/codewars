@@ -1,0 +1,6 @@
+from datetime import datetime
+import hashlib
+def geohash(dow, dt=None):
+    if not dt: dt=datetime.now()
+    dd=hashlib.md5(str(str(dt.date())+"-{0:.2f}".format(dow)).encode('utf-8')).hexdigest()
+    return [ round(float.fromhex(i),6) for i in ['0.'+str(dd)[:16],'0.'+str(dd)[16:]] ]
